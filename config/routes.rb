@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  
+  get '/', to: 'houses#index'
+  
+  get '/houses', to: 'houses#index'
+  
+  get '/houses/new', to: 'houses#new'
+  
+  post '/houses', to: 'houses#create'
+  
+  get '/houses/:id', to: 'houses#show'
+  
+  get '/houses/:id/edit', to: 'houses#edit'
+  
+  patch '/houses/:id', to: 'houses#update'
+  
+  delete '/houses/:id', to: 'houses#destroy'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

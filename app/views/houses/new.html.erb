@@ -1,0 +1,38 @@
+<h3>Enter in a new house listing below:</h3>
+<%= form_tag "/houses", method: :post do %>
+  <div>
+    <%= label_tag :description, "House Description" %>
+    <%= text_field_tag :description, "This is a very nice house." %>
+  </div>
+  <div>
+    <%= label_tag :address, "Address of House" %>
+    <%= text_field_tag :address, "11 Example Avenue, Example EX" %>
+  </div>
+  <div>
+    <%= label_tag :year_built, "Year Built" %>
+    <%= text_field_tag :year_built %>
+  </div>
+  <div>
+    <%= label_tag :square_feet, "Square Feet" %>
+    <%= text_field_tag :square_feet %>
+  </div>
+  <div>
+    <%= label_tag :bedrooms, "Bedrooms" %>
+    <%= text_field_tag :bedrooms %>
+  </div>
+  <div>
+    <%= label_tag :bathrooms, "Bathrooms" %>
+    <%= text_field_tag :bathrooms %>
+  </div>
+  <div>
+    <%= label_tag :availability, "Available? " %>
+    <%= check_box :availability, :truefalse, {class: ""}, checked_value = "true", unchecked_value = "false" %>
+  </div>
+  <div>
+    <%= label_tag :price, "Price" %>
+    <%= text_field_tag :price %>
+  </div>
+  <div>
+    <%= submit_tag "Submit Listing" %>
+  </div>
+<% end %>
